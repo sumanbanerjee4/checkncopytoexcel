@@ -152,8 +152,8 @@ public class Controller {
 			converter.addCourse(fileName);
 			return "success";
 		}
-		
-		return "cannot populate duplicates";
+		else {
+		return "cannot populate duplicates";}
 }
 	@GetMapping("/alluser")
 	public List<Employees> getUsers(){

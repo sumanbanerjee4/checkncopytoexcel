@@ -2,13 +2,17 @@ package com.example.assignment.model;
 
 import java.util.List;
 
-import org.springframework.data.mongodb.core.mapping.Document;
 
+
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.index.Indexed;
 import com.fasterxml.jackson.annotation.JsonIgnoreType;
+
 @Document
 @JsonIgnoreType				
 public class Employees {
 	
+	@Indexed(unique=true)
 	private double empno;	
 	private String empName;	
 	private double projectId;	

@@ -92,8 +92,8 @@ public class ObjectToExcel {
 			font.setColor(IndexedColors.BLUE.getIndex());
 			style.setFont(font);
 
-			id = employee.getCourse().stream().map(i -> i.getCourseExamId()).collect(Collectors.toList());
-			reason = employee.getCourse().stream().map(i -> i.getReasonIfNotRelevant()).collect(Collectors.toList());
+			id = employee.getCourse().stream().filter(i->i.getDateOfFulfillment()==null).map(i -> i.getCourseExamId()).collect(Collectors.toList());
+			reason = employee.getCourse().stream().filter(i->i.getDateOfFulfillment()==null).map(i -> i.getReasonIfNotRelevant()).collect(Collectors.toList());
 			
 			Map<String, String> map = IntStream.range(0, id.size()).collect(HashMap::new,
 					(m, i) -> m.put(id.get(i), reason.get(i)), Map::putAll

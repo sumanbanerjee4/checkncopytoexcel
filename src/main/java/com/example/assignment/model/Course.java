@@ -34,12 +34,16 @@ public class Course {
 	public void setType(String type) {
 		this.type = type;
 	}
+	
+	
 	public Date getDateOfFulfillment() {
 		return dateOfFulfillment;
 	}
-	public void setDateOfFulfillment(Date string) {
+
+	public void setDateOfFulfillment(Date dateOfFulfillment) {
 		this.dateOfFulfillment = dateOfFulfillment;
 	}
+
 	public String getLearningCredit() {
 		return learningCredit;
 	}
